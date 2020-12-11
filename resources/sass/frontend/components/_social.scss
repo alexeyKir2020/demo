@@ -1,0 +1,46 @@
+.social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.social-action__title {
+    position: absolute;
+    top: -0.8em;
+    display: flex;
+    background: white;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.social__title {
+    margin: 0;
+    padding-bottom: 0.5em;
+}
+
+.social__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.social__icon {
+    font-size: 2.5em;
+    color: $secondary;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        text-shadow: 0px 0px 2px $secondary;
+        transition: all 0.2s ease-in;
+    }
+}

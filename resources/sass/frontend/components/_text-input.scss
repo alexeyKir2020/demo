@@ -1,0 +1,32 @@
+.text-input {
+    height: 100%;
+    width: 100%;
+    background: $background;
+    border: 1px solid #E8ECEE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.3em 1em;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+
+    }
+}
+
+.text-input_transparent {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid $background;
+    color: $background;
+
+}
+
+

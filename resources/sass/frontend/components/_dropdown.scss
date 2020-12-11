@@ -1,0 +1,26 @@
+.dropdown {
+    display: flex;
+    max-height: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+}
+
+.dropdown__item {
+    height: 3em;
+}
+
+.dropdown__link {
+    height: 100%;
+}
+.dropdown__text {
+    font-size: 1em;
+}
+
+.dropdown__open {
+    max-height: 100px;
+}

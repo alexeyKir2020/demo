@@ -1,0 +1,258 @@
+.row {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+
+    @media #{$small-and-up} {
+        justify-content: space-around;
+    }
+
+    @media #{$xxlarge-and-up} {
+        justify-content: space-between;
+    }
+}
+
+
+.row.spaced {
+    justify-content: space-between !important;
+}
+
+
+
+.row_centered {
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: $xl;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+
+    position: relative;
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &.no-pad {
+        padding: 0;
+    }
+    &.no-pad-bot {
+        padding-bottom: 0;
+    }
+    &.no-pad-top {
+        padding-top: 0;
+    }
+}
+
+
+
+// Mixins to eliminate code repitition
+@mixin reset-offset {
+
+    //left: auto;
+    //right: auto;
+}
+@mixin grid-classes($size, $i, $perc) {
+    &.offset-#{$size}#{$i} {
+        margin-right: $perc;
+    }
+    &.pull-#{$size}#{$i} {
+        right: $perc;
+    }
+    &.push-#{$size}#{$i} {
+        left: $perc;
+    }
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+
+    .col {
+        float: left;
+        box-sizing: border-box;
+        //padding: 0 $gutter-width / 2;
+        min-height: 1px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &[class*="push-"],
+        &[class*="pull-"] {
+            position: relative;
+        }
+
+        &.xs-hidden {
+            display: none;
+        }
+
+        $i: 1;
+        @while $i <= $num-cols {
+            $perc: calc((100%) / (#{$num-cols} / #{$i}));
+            &.xs#{$i} {
+                width: $perc;
+                @include reset-offset;
+
+            }
+            $i: $i + 1;
+        }
+
+        $i: 1;
+        @while $i <= $num-cols {
+            $perc: calc((100%) / (#{$num-cols} / #{$i}));
+            @include grid-classes("xs", $i, $perc);
+            $i: $i + 1;
+        }
+
+        @media #{$small-and-up} {
+            &.s-up {
+                display: block;
+            }
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                &.s#{$i} {
+                        width: $perc;
+                        @include reset-offset;
+
+                }
+                $i: $i + 1
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                @include grid-classes("s", $i, $perc);
+                $i: $i + 1;
+            }
+        }
+
+        @media #{$medium-and-up} {
+            &.m-show {
+                display: block;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                &.m#{$i} {
+                    width: $perc;
+                    @include reset-offset;
+
+                }
+                $i: $i + 1
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                @include grid-classes("m", $i, $perc);
+                $i: $i + 1;
+            }
+        }
+
+        @media #{$large-and-up} {
+            &.l-show {
+                display: block;
+            }
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                &.l#{$i} {
+                    width: $perc;
+                    @include reset-offset;
+
+                }
+                $i: $i + 1;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: unquote((100 / ($num-cols / $i)) + "%");
+                @include grid-classes("l", $i, $perc);
+                $i: $i + 1;
+            }
+        }
+
+        @media #{$xlarge-and-up} {
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                &.xl#{$i} {
+                    width: $perc;
+                    @include reset-offset;
+
+                }
+                $i: $i + 1;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));;
+                @include grid-classes("xl", $i, $perc);
+                $i: $i + 1;
+            }
+        }
+
+        @media #{$xxlarge-and-up} {
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));
+                &.xxl#{$i} {
+                    width: $perc;
+                    @include reset-offset;
+
+                }
+                $i: $i + 1;
+            }
+
+            $i: 1;
+            @while $i <= $num-cols {
+                $perc: calc((100%) / (#{$num-cols} / #{$i}));;
+                @include grid-classes("xxl", $i, $perc);
+                $i: $i + 1;
+            }
+        }
+    }
+}
+.row .col.offset-right {
+    margin-left: unset;
+    margin-right: auto;
+}
+.row .col.offset-left {
+    margin-right: unset;
+    margin-left: auto;
+}
+.pb-1 {
+    padding-bottom: 1em;
+}
+.pb-2 {
+    padding-bottom: 2em;
+}
+.pb-3 {
+    padding-bottom: 3em;
+}
+
+.pt-2 {
+    padding-top: 2em;
+}
+.xl-left {
+    @media #{$xlarge-and-up} {
+        margin-right: auto;
+    }
+}

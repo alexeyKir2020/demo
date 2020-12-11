@@ -1,0 +1,21 @@
+.not-found {
+
+    background: url("/images/static-page-content/errors/not-found-desktop.webp") center center no-repeat;
+
+    background-size: contain;
+    height: 300px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-weight: bold;
+
+    margin-top: 3em;
+    @media #{$medium-and-up} {
+        width: 400px;
+    }
+}
+
+.not-found__text {
+    margin: 0;
+    font-size: 1.5em;
+}

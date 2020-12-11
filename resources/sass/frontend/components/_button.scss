@@ -1,0 +1,41 @@
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    min-height: 48px;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+
+.button__content {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button__content + .button__content {
+    margin-top: 1em;
+}
+
+.button_loading {
+    transition: opacity 0.3s ease-in-out;
+    font-size: 2em;
+}
+.button_loading > .button__content{
+    height: 0;
+    font-size: 0.5em;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+

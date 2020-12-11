@@ -1,0 +1,65 @@
+.filter__content {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    grid-gap: 1em;
+    grid-auto-flow: row;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+.filter__container {
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 320px;
+
+    @media #{$large-and-up} {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        overflow: visible;
+        z-index: 5;
+    }
+}
+.filter__trigger {
+    z-index: 1005;
+
+    @media #{$large-and-up} {
+        display: none;
+    }
+
+    &:before {
+        content: "\F0232";
+        display: inline-block;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &.opened:before {
+        content: "\F10E5";
+        display: inline-block;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+.filter__title {
+
+    @media #{$large-and-up} {
+        display: none;
+    }
+}
+
+

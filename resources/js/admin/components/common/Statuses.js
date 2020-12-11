@@ -1,0 +1,12 @@
+export default {
+    CREATED: 0,
+    WAITING_EMAIL_VERIFICATION: 1,
+    EMAIL_VERIFIED: 2,
+    WAITING_APPROVAL: 3,
+    APPROVED: 4,
+    PUBLISHED: 5,
+    UPDATED: 6,
+    ARCHIVED: 7,
+    SUSPENDED: 8,
+    DELETED: 9,
+}

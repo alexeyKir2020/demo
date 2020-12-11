@@ -1,0 +1,8 @@
+.link {
+    text-decoration: none;
+    color: $primary;
+    font-weight: inherit;
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,39 @@
+.article__heading {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+.article__subtitle {
+    color: $black;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.5em;
+    padding-left: 1em;
+}
+.article__description {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        padding-inline-start: 1em;
+        list-style: none;
+
+    li {
+        position: relative;
+        padding-left: 1.5em;
+
+        &:before {
+            content: "\2022";
+            line-height: 50%;
+            font-weight: bold;
+            font-size: 2.5em;
+            color: #cccccc;
+            position: absolute;
+            margin-left: -0.6em;
+            margin-top: -2px;
+        }
+    }
+
+    li p {
+        margin-bottom: 1em;
+    }
+}

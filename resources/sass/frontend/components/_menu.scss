@@ -1,0 +1,134 @@
+.menu {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: flex-start;
+    color: black;
+}
+
+
+.menu__title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: $menu-height;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    z-index: 1020;
+}
+
+
+.menu .menu__toggler {
+    color: $black;
+    margin-left: 0;
+}
+
+.menu__nav {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    margin-left: auto;
+}
+
+.menu__item {
+    height: 100%;
+    line-height: 100%;
+
+    @media #{$xlarge-and-up} {
+        font-size: 0.9em;
+    }
+
+    @media #{$xxlarge-and-up} {
+        font-size: 1em;
+    }
+}
+.menu__item:last-child {
+    @media #{$xlarge-and-up} {
+        margin-right: -1em;
+    }
+
+    @media #{$xxlarge-and-up} {
+        margin-right: -2em;
+    }
+}
+.menu__link {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    height: 100%;
+    font-size: 0.9em;
+}
+
+.menu__search {
+    height: 100%;
+    width: 70%;
+    box-sizing: border-box;
+
+    .input-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .search__input {
+        padding-right: 2em !important;
+        padding-left: 2em !important;
+        width: 70%;
+        transform: translateX(-70%);
+        height: 2em !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0) !important;
+        transition: all 0.3s ease-in-out !important;
+
+        &:focus {
+            border-bottom: 1px solid $black !important;
+            transform: translateX(0%) !important;
+        }
+
+        &:not(:placeholder-shown) {
+            transform: translateX(0%) !important;
+            border-bottom: 1px solid $black !important;
+
+            .search__close {
+                opacity: 1 !important;
+            }
+        }
+
+        &:not(:placeholder-shown) + .search__close {
+            opacity: 1 !important;
+        }
+
+    }
+
+    .search__icon {
+        position: absolute;
+        left: 0 !important;
+        transform: none !important;
+    }
+
+    .search__close {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+}
+
+

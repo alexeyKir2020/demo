@@ -1,0 +1,195 @@
+.card.offer-card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+
+    .card-content {
+        padding: 1em;
+        border-radius: 0 0 2px 2px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+        justify-content: space-between;
+        grid-gap: 1em;
+        grid-template-areas:
+            "title"
+            "content";
+    }
+
+    .card-title {
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.2em !important;
+    }
+
+    .offer__title {
+
+        font-size: 1.2em;
+        text-align: left;
+        overflow: hidden;
+        display: -webkit-box;
+        width: 100%;
+        padding-right: 2em;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        height: 2.5em;
+        margin: 0;
+    }
+
+    .location {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 0.9em;
+        overflow: hidden;
+        display: -webkit-box;
+        width: 100%;
+    }
+
+    .organisation {
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-size: 0.9em;
+        overflow: hidden;
+        display: -webkit-box;
+        width: 100%;
+        height: 1.5em;
+        color: $primary;
+    }
+
+    .offer__icon {
+        font-size: 1.5em;
+        margin-right: 0.5em;
+        line-height: 1.2em;
+
+        color: $primary;
+    }
+
+    &:hover {
+        .content-reveal {
+            transform: translateY(-100%);
+        }
+    }
+    .content-reveal {
+        transition: transform 0.3s ease-in-out;
+        will-change: transform;
+        transform: translateY(0%);
+        z-index: 1;
+        height: 180px;
+        width: 100%;
+        padding: 0 1em 0;
+        position: absolute;
+        background-color: #fff;
+        overflow-y: auto;
+        left: 0;
+        top: 100%;
+    }
+    .reveal-text {
+        height: 84px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 0.9em;
+        line-height: 1.2em;
+        text-align: left;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .reveal-action {
+        padding: 1em;
+    }
+
+    .reveal-button {
+        font-size: 1em;
+    }
+    .content-reveal.show {
+        transform: translateY(-100%);
+    }
+}
+
+
+.offer__info {
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    line-height: 100%;
+    grid-column: auto;
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        line-height: 2em;
+        margin-top: 0.5em;
+    }
+    i {
+        font-size: 1.3em;
+        margin-right: 0.3em;
+    }
+}
+
+.offer-card__badge {
+    position: absolute;
+    font-size: 1.5em;
+    top: 40px;
+    right: -10px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    line-height: 100%;
+    color: $primary;
+    padding: 0.5rem;
+    width: 3rem;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.offer-card__action {
+    margin-top: 1em;
+    padding: 0 !important;
+    padding-top: 1em !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media #{$medium-and-up} {
+        justify-content: space-between;
+    }
+}
+.offer-item__share {
+
+
+    margin-top: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+
+    p {
+        font-size: 1em;
+        color: $secondary;
+        font-weight: 600;
+        background-color: white;
+    }
+
+    @media #{$medium-and-up} {
+        margin-top: -2em;
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+.offer-item__social {
+    margin-bottom: 0;
+    margin-top: 0.7em;
+    background: white;
+    justify-content: center;
+
+    li {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }
+}

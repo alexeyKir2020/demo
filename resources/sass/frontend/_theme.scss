@@ -1,0 +1,30 @@
+//Layout
+$header-height: 70px;
+$menu-height: $header-height;
+$footer-height: 200px;
+
+$min-width: 320px;
+$max-width: 1200px;
+
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//palette
+
+$background: $white;
+$background-darken: $lightgray;
+$primary: $violet;
+$secondary: $orange;
+$menu: $black;
+
+$info: $blue;
+$error: $red;
+$success: $orange;
+$disabled: $gray;
+
+$header-color: rgba(18,18,18,.9);
+
+//typography

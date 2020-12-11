@@ -1,0 +1,23 @@
+.section {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    font-size: 1em;
+
+    @media #{$xlarge-and-up} {
+        padding-top: 5em;
+        padding-bottom: 5rem;
+    }
+}
+
+.section__subtitle {
+    font-weight: 700;
+    margin-top: -2em;
+    margin-bottom: 2em;
+}
+
+.section__footer {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}

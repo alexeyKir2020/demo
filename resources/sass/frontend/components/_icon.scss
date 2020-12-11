@@ -1,0 +1,39 @@
+.icon {
+
+}
+
+.icon_blog {
+    height: 1.3em;
+    width: 100%;
+    background-size: cover;
+    background: url("/images/logo/teenteam-logo.svg") center center no-repeat;
+}
+
+.icon_login {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+.icon_search {
+    color: $black !important;
+}
+.icon_cities {
+    &:before {
+        content: "\F0415";
+    }
+}
+.icon_collapse {
+    color: $black !important;
+    transition: all 0.2s;
+    align-self: start;
+
+    &:before {
+        content: "\F0415";
+    }
+}
+
+.active .icon_collapse {
+    &:before {
+        content: "\F0374";
+    }
+}

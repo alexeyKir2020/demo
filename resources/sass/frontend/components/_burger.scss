@@ -1,0 +1,11 @@
+.burger {
+    background: url("/images/icons/icon-burger.svg") center center no-repeat;
+    background-size: cover;
+    height: 56px;
+    width: 56px;
+    transition: 0.2s background ease-in;
+}
+
+.burger_open {
+    background: url("/images/icons/icon-burger-open.svg") center center no-repeat;
+}

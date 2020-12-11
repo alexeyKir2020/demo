@@ -1,0 +1,222 @@
+.offer-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.offer-item__header {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 3px 1px -2px rgba(0, 0, 0, 0.12),
+                0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    margin-bottom: 1em;
+
+    @media #{$large-and-up} {
+        display: block;
+    }
+
+    &_mobile {
+        display: block;
+        @media #{$large-and-up} {
+            display: none;
+        }
+    }
+}
+
+.offer-item__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.offer-item__social {
+    justify-content: space-evenly;
+}
+
+
+
+.offer-item__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: stretch;
+
+    @media #{$large-and-up} {
+        flex-wrap: nowrap;
+    }
+}
+
+.offer-item__description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 1.2em;
+    flex-basis: 300px;
+
+    @media #{$large-and-up} {
+        font-size: 1em;
+    }
+}
+
+.offer-item__sidebar {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 0 1em 0;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #252525;
+
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    justify-content: space-between;
+
+
+    @media #{$large-and-up} {
+        width: 320px;
+        margin-left: 2em;
+        font-size: 1.1rem;
+    }
+}
+.offer-item__info {
+    display: inline-flex;
+    align-items: center;
+    line-height: 100%;
+    grid-column: auto;
+    margin: 0;
+    padding: 0.5em 1em;
+
+    span {
+        display: inline-flex;
+        align-items: center;
+        line-height: 2em;
+        margin-top: 0.5em;
+    }
+
+    i {
+        font-size: 1.2em;
+        margin-right: 0.3em;
+        line-height: 1.2em;
+        color: $primary;
+    }
+}
+
+.offer-item__info_small {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 400;
+    span {
+        line-height: 1.2em;
+    }
+
+    i {
+        line-height: 1em;
+    }
+}
+.offer-item__location {
+    width: 100%;
+}
+.share__title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.offer-item__footer_mobile {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    @media #{$medium-and-up} {
+        justify-content: space-between;
+    }
+
+    @media #{$large-and-up} {
+        display: none;
+    }
+}
+
+.offer-item__footer {
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    display: none;
+    flex-direction: row;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    @media #{$large-and-up} {
+        display: flex;
+    }
+}
+
+.offer-item__info_map {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.offer-item__title {
+    width: 100%;
+    height: auto;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    margin: 0 0 1em 0;
+
+    @media #{$large-and-up} {
+        text-align: left;
+    }
+}
+.offer-item__map {
+    width: 100%;
+    max-width: calc(100vw - 2rem);;
+    height: 200px;
+    margin: 0.5em 0;
+    overflow: hidden;
+}
+.offer-item__text {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-bottom: 1.5em;
+}

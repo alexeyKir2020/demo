@@ -1,0 +1,48 @@
+.card {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 2em;
+
+}
+
+.card.card_embed {
+    width: 260px;
+    box-shadow: none;
+    background: none;
+    transition: none;
+}
+
+.card_event {
+    width: 260px;
+}
+
+.card__header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__body {
+    margin-top: 1em;
+}
+.card__subtitle {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em 0;
+
+    a {
+        text-decoration: underline;
+        color: $primary;
+    }
+}
+
+
+.card__text {
+}
+
+

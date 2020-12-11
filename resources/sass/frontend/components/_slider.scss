@@ -1,0 +1,64 @@
+.slider {
+    width: 100%;
+}
+
+.carousel.slider_partners {
+    height: 200px;
+}
+
+.carousel.slider_organisations {
+    height: 200px;
+}
+
+.carousel.slider_reviews {
+    height: 400px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    width: 100%;
+}
+
+.slider__container {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.slider__button {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 43%;
+
+    &:focus {
+        outline: none;
+    }
+    &:after {
+        content: " ";
+        width: 40px;
+        height: 40px;
+        display: block;
+        background-size: contain;
+        color: $violet;
+    }
+    z-index: 910;
+}
+
+.slider__button_next {
+    right: 0;
+
+    &:after {
+        background: url(/images/icons/icon-arrow-right.svg) center center no-repeat;
+        background-size: contain;
+    }
+}
+
+.slider__button_prev {
+    left: 0;
+
+    &:after {
+        background: url(/images/icons/icon-arrow-left.svg) center center no-repeat;
+        background-size: contain;
+    }
+}
+
+
